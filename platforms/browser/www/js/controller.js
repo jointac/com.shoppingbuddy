@@ -5,8 +5,7 @@ myApp
 	$timeout(function(){
     	$scope.welcomepage = false;
     	$scope.detailpage = true;
-    	alert('yes');
-    },5000)
+    },2500)
 
     var ctrl = this;
 	$scope.error = false;
@@ -27,6 +26,10 @@ myApp
 		var $url = 'shoppinglinks';
 		$scope.shoppinglinks = false;
 		switch(link) {
+			case 0:
+				$scope.pricingdetail = false;
+				$scope.shoppinglinks = true;
+				$scope.promoitems = false;
 			case 2:
 				$url = 'aisle';
 				break;
@@ -35,10 +38,8 @@ myApp
 				$url = 'promoitems';
 				$scope.detailheight = (($(window).height() - 50) - 100 - 100).toString() + "px";
 				$scope.aisleitems = promoitems;
-				alert($scope.aisleitems[0].itemdesc);
 				break;
 		}
-		alert($url);
 	}
 		
 	//alert($globalbudget);
