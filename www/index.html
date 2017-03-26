@@ -53,15 +53,14 @@
             <div class="welcome-logo"></div>
         </div>
         <div ng-show="detailpage">
-            <div class="shopping-header" ng-include="'template/header.tpl.html'">
-            </div>
+            <div><div class="shopping-header" ng-include="'template/header.tpl.html'"></div></div>
             <div class="shoppingdetail-container" ng-show="pricingdetail">
                 <div class="overlay">
-                <div class="welcome-header header-font ">WE'VE GOT IT ALL FOR YOU!</div>
-                <div class="input-text"><input class="input-style" type="text" placeholder="Amount" ng-model="splashpage.txtAmt"></div>
-                <div class="welcome-description">ENTER DESIRED BUDGET</div>
-                <div class="errormsg" ng-show="error">Please enter a valid amount.</div>
-                <div class="welcome-button"><a class="btn-class" ng-click="proceednow()">PROCEED</a></div>
+                    <div class="welcome-header header-font ">WE'VE GOT IT ALL FOR YOU!</div>
+                    <div class="input-text"><input class="input-style" type="text" placeholder="Amount" ng-model="splashpage.txtAmt"></div>
+                    <div class="welcome-description">ENTER DESIRED BUDGET</div>
+                    <div class="errormsg" ng-show="error">Please enter a valid amount.</div>
+                    <div class="welcome-button"><a class="btn-class" ng-click="proceednow()">PROCEED</a></div>
                 </div>
             </div>
             <div class="shoppinglink-container" ng-show="shoppinglinks" ng-style="{height:windowheight}">
@@ -71,12 +70,66 @@
                 <div class="div promo-items"><div class="inner-container overlay" ng-click="goto(4)">PROMO ITEMS</div></div>
                 <div class="div shopper"><div class="inner-container overlay" ng-click="goto(5)">SHOPPER</div></div>
             </div>
-            <div class="promoitem-container" ng-show="promoitems" ng-style="{height:windowheight}">
+            <div class="shopping-container" ng-show="whatsnewpage">
+                <div class="promoitem-container" style="height:100%;">
+                    <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisleheader">WHAT'S NEW?</div><div class="rightcol"></div></div>
+                    <div class="promoitem-details" style="height:100%;">
+                        <div ng-repeat="item in whatsnew" class="item-container">
+                            <div class="itemimg-container">
+                                {{item.itemdesc}}
+                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
+                            </div>
+                            <div class="whatsnewdesc">
+                            {{item.itemamt}}<br>
+                            {{item.promodetail}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="promoitem-add"></div> -->
+                </div>
+            </div>
+            <div class="shopping-container" ng-show="aislepage" >
+                <div class="promoitem-container" style="height:100%;">
+                    <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                        <div class="aisleheader">AISLES</div><div class="rightcol"></div></div>
+                    <div class="promoitem-details" style="height:100%;">
+                        <div ng-repeat="item in aisleitems" class="item-container">
+                            <div class="aislenum">AISLE {{item.aisle}}</div>
+                            <div class="itemimg-container">
+                                <div class="aislecat">{{item.cat}}</div>
+                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
+                                <div class="aisledesc">{{item.description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shopping-container" ng-show="promopage">
+                <div class="promoitem-container" style="height:100%;">
+                    <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisleheader">PROMOTIONAL ITEMS!<div class="promoitem-description">CHECK IT OUT UNTIL SUPPLIES LAST!</div></div><div class="rightcol"></div></div>
+                    <div class="promoitem-details" style="height:100%;">
+                        <div ng-repeat="item in prmitems" class="item-container">
+                            <div class="itemimg-container">
+                                {{item.itemdesc}}
+                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
+                                <div class="imgamt">{{item.itemamt}}</div>
+                            </div>
+                            <div class="itemdiscount">
+                            {{item.promodetail}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="promoitem-add"></div> -->
+                </div>
+            </div>
+            <div class="shoppinglink-container" ng-show="productcat1" ng-style="{height:windowheight}">
                 <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">AISLES</div><div class="rightcol"></div></div>
-                <div class="promoitem-details" ng-style="{height:detailheight}">
+                <div class="aisleheader">PRODUCT CATEGORIES</div><div class="rightcol"></div></div>
+                <div class="promoitem-container" style="height:100%;">
                     <div ng-repeat="item in aisleitems" class="item-container">
-                        <div class="itemimg-container">
+                        <div class="productcat-container" ng-click="gotocat(item.aisle)">
                             <div class="aislecat">{{item.cat}}</div>
                             <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
                             <div class="aisledesc">{{item.description}}</div>
