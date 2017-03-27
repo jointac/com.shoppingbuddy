@@ -72,7 +72,7 @@
             </div>
             <div class="shopping-container" ng-show="whatsnewpage">
                 <div class="promoitem-container" style="height:100%;">
-                    <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisle-header"><div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
                     <div class="aisleheader">WHAT'S NEW?</div><div class="rightcol"></div></div>
                     <div class="promoitem-details" style="height:100%;">
                         <div ng-repeat="item in whatsnew" class="item-container">
@@ -91,7 +91,7 @@
             </div>
             <div class="shopping-container" ng-show="aislepage" >
                 <div class="promoitem-container" style="height:100%;">
-                    <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisle-header"><div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
                         <div class="aisleheader">AISLES</div><div class="rightcol"></div></div>
                     <div class="promoitem-details" style="height:100%;">
                         <div ng-repeat="item in aisleitems" class="item-container">
@@ -107,7 +107,7 @@
             </div>
             <div class="shopping-container" ng-show="promopage">
                 <div class="promoitem-container" style="height:100%;">
-                    <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisle-header"><div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
                     <div class="aisleheader">PROMOTIONAL ITEMS!<div class="promoitem-description">CHECK IT OUT UNTIL SUPPLIES LAST!</div></div><div class="rightcol"></div></div>
                     <div class="promoitem-details" style="height:100%;">
                         <div ng-repeat="item in prmitems" class="item-container">
@@ -121,14 +121,15 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="promoitem-add"></div> -->
                 </div>
             </div>
             <div class="shoppinglink-container" ng-show="productcat1" ng-style="{height:windowheight}">
-                <div class="aisle-header"><div class="goback"><img src="/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
-                <div class="aisleheader">PRODUCT CATEGORIES</div><div class="rightcol"></div></div>
-                <div class="promoitem-container" style="height:100%;">
-                    <div ng-repeat="item in aisleitems" class="item-container">
+                <div class="aisle-header">
+                    <div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisleheader">PRODUCT CATEGORIES</div><div class="rightcol"></div>
+                </div>
+                <div class="productitem-container" style="height:100%;width:100%">
+                    <div ng-repeat="item in products1" class="productcatitem-container" ng-style="{background-image:item.background}">
                         <div class="productcat-container" ng-click="gotocat(item.aisle)">
                             <div class="aislecat">{{item.cat}}</div>
                             <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
@@ -136,6 +137,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="footer-promopage"><div class="left" ng-click="goto(3)"><img src="../www/img/house2.png" class="imggoback"></div><div class="right" ng-click="goto(6)">RIGHT</div></div>
+            </div>
+            <div class="shoppinglink-container" ng-show="productcat2" ng-style="{height:windowheight}">
+                <div class="aisle-header">
+                    <div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisleheader">PRODUCT CATEGORIES</div> <div class="rightcol"></div>
+                </div>
+                <div class="productitem-container" style="height:100%;width:100%">
+                    <div ng-repeat="item in products2" class="productcatitem-container" ng-style="{background-image:item.background}">
+                        <div class="productcat-container" ng-click="gotocat(item.aisle)">
+                            <div class="aislecat">{{item.cat}}</div>
+                            <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
+                            <div class="aisledesc">{{item.description}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-promopage"><div ng-click="goto(7)"><img src="../www/img/house2.png" class="imggoback"></div></div>
             </div>
         </div>
     </div>

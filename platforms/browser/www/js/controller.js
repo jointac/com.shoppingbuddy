@@ -1,5 +1,5 @@
 myApp
-.controller("splashpageCtrl", function($scope, $timeout, promoitems, newitem, aisle, grocery) {
+.controller("splashpageCtrl", function($scope, $timeout, promoitems, newitem, aisle, grocery, productcat) {
 	$scope.welcomepage = true;
 	$scope.detailpage = false;
 	$timeout(function(){
@@ -17,6 +17,7 @@ myApp
 	$scope.promopage = false;
 	$scope.whatsnewpage =false;
 	$scope.productcat1 = false;
+	$scope.productcat2 = false;
 	$scope.aisleitems = aisle;
 	$scope.shoppingcart = [];
 	//productcat1
@@ -27,6 +28,7 @@ myApp
 			$scope.error = false;
 			$scope.pricingdetail = false;
 			$scope.productcat1 = true;
+			$scope.products1 = productcat.product1();
 		} else {
 			$scope.error = true;
 		}
@@ -39,6 +41,7 @@ myApp
 		$scope.aislepage = false;
 		$scope.promopage = false;
 		$scope.productcat1 = false;
+		$scope.productcat2 = false;
 		$scope.whatsnewpage = false;
 		switch(link) {
 			case 0:
@@ -63,6 +66,17 @@ myApp
 				$scope.detailheight = (($(window).height() - 50) - 100 - 100).toString() + "px";
 				$scope.promopage = true;
 				$scope.prmitems = promoitems;
+				break;
+			case 5:
+				break;
+			case 6:
+				$scope.productcat2 = true;
+				$scope.products2 = productcat.product2();
+				alert($scope.products2[0].aisle);
+				break;
+			case 7:
+				$scope.productcat1 = true;
+				$scope.products1 = productcat.product1();
 				break;
 		}
 	}
