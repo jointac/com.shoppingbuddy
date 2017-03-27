@@ -174,3 +174,16 @@ h1 {
 .footer-promopage .right {text-align:right;}
 .productcatitem-container {width:16.66%;float:left;}
 .productitem-container {background-color:lightgrey;padding-top:100px;}
+/**product page**/
+.productpage-container {width:100%;}
+.productpageleft {width:70%;float:left;}
+.productpageright {width:30%;float:left;height:100%;}
+.productpageheader, .search {height:60px;background-color:#A7D3ED;padding:20px;font-size:30px;}
+.productpagedetail {width:inherit;}
+.productpagedetails {width:100%;}
+.productpagedetail-item {width:25%;float:left;padding:20px;}
+.productpagedetailheader { padding:15px 20px; }
+.productpage-item {background-color:#fff;padding:10px;height:200px;width:100%;}
+.productdesc {font-size:20px;text-align:center;width:inherit;}
+.productdescprice {font-size:22px;text-align:center;padding:10px;background-color:#243E8A;color:#fff;width:100%;}
+.rightcontainer {border-left:grey 1px solid;height:inherit;}

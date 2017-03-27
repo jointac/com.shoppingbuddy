@@ -18,10 +18,15 @@ myApp
 	$scope.whatsnewpage =false;
 	$scope.productcat1 = false;
 	$scope.productcat2 = false;
+	$scope.productpage = false;
+	$scope.productpagedetail = false;
 	$scope.aisleitems = aisle;
 	$scope.shoppingcart = [];
+	$scope.productcategory = '';
+	$scope.subcategory ='';
+
 	//productcat1
-	$scope.windowheight = ($(window).height() - 50).toString() + "px";
+	$scope.windowheight = "100vh";
 	$scope.proceednow = function() {
 		if ($.isNumeric(ctrl.txtAmt)) {
 			budget = ctrl.txtAmt;
@@ -43,13 +48,11 @@ myApp
 		$scope.productcat1 = false;
 		$scope.productcat2 = false;
 		$scope.whatsnewpage = false;
+		$scope.productpage = false;
+		$scope.productpagedetail = false;
 		switch(link) {
 			case 0:
-				$scope.pricingdetail = false;
 				$scope.shoppinglinks = true;
-				$scope.promoitems = false;
-				$scope.aislepage = false;
-				$scope.promopage = false;
 				break;
 			case 1:
 				$scope.whatsnewpage = true;
@@ -80,49 +83,91 @@ myApp
 		}
 	}
 	$scope.gotocat = function(link) {
+		$scope.pricingdetail = false;
+		$scope.shoppinglinks = false;
+		$scope.promoitems = false;
+		$scope.aislepage = false;
+		$scope.promopage = false;
+		$scope.productcat1 = false;
+		$scope.productcat2 = false;
+		$scope.whatsnewpage = false;
+		$scope.productpagedetail = false;
+		$scope.productpage = true;
 		switch (link) {
 			case "1":
 				$scope.groceryitem = grocery.freshproduce();
+				$scope.productcategory = "FRESH PRODUCE";
+				$scope.subcategory = "FRUITS";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "2":
 				$scope.groceryitem = grocery.meatseafood();
+				$scope.productcategory = "MEAT & SEAFOOD";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "3":
 				$scope.groceryitem = grocery.dairyegg();
+				$scope.productcategory = "DAIRY & EGGS";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "4":
 				$scope.groceryitem = grocery.bakery();
+				$scope.productcategory = "BAKERY";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "5":
 				$scope.groceryitem = grocery.breakfast();
+				$scope.productcategory = "BREAKFAST";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "6":
 				$scope.groceryitem = grocery.frozen();
+				$scope.productcategory = "FROZEN GOODS";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "7":
 				$scope.groceryitem = grocery.pantry();
+				$scope.productcategory = "PANTRY";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "8":
 				$scope.groceryitem = grocery.canneditem();
+				$scope.productcategory = "CANNED GOODS";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "9":
 				$scope.groceryitem = grocery.driedfood();
+				$scope.productcategory = "PASTA & DRIED GOODS";
 				alert($scope.groceryitem[0].description);
 				break;
 			case "10":
 				$scope.groceryitem = grocery.beverage();
+				$scope.productcategory = "BEVERAGE";
+				$scope.subcategory = "JUICES & HEALTH DRINKS";
+				alert($scope.groceryitem[0].description);
+				break;
+			case "11":
+				$scope.groceryitem = grocery.healthbeauty();
+				$scope.productcategory = "HEALTH & BEAUTY";
+				alert($scope.groceryitem[0].description);
+				break;
+			case "12":
+				$scope.groceryitem = grocery.homecare();
+				$scope.productcategory = "HOME CARE";
 				alert($scope.groceryitem[0].description);
 				break;
 		}
-	}
+	};
+	$scope.gotoproduct = function(cat,id){
+		$scope.productitem = {};
+		var identity = id - 1;
+		switch (cat) {
+			case "FRESH PRODUCE":
+				$scope.productitem = grocery.freshproduce()[identity];
+				alert($scope.productitem.description);
+				break;
+		}
+	};
 })
 .controller('headerCtrl', function($scope){
 	var dayarr = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];

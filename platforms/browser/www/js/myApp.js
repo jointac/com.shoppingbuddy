@@ -189,17 +189,17 @@ myApp
     groceryitem.freshproduce = function() {
         var items = [{
             "item":1,
-            "description":"Apple",
-            "price":5,
-            "weight":1,
+            "description":"BANANA LACATAN",
+            "price":78.00,
+            "weight":"PER 1KG",
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
             "item":2,
-            "description":"Cabbage",
-            "price":5,
-            "weight":1,
+            "description":"APPLE",
+            "price":50.75,
+            "weight":"PER 1KG",
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -374,17 +374,65 @@ myApp
     groceryitem.beverage = function() {
         var items = [{
             "item":1,
-            "description":"Coke",
-            "price":5,
-            "weight":1,
+            "description":"BIG 250 DRINK ORANGE",
+            "price":55.00,
+            "weight":"250 ML",
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
             "item":2,
-            "description":"Iced Tea",
-            "price":5,
-            "weight":1,
+            "description":"CITRUS FARMS CONCENTRATE...",
+            "price":204.50,
+            "weight":"750 ML",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":3,
+            "description":"DEL MONTE 100% PINEAPPLE RECUOL...",
+            "price":27.95,
+            "weight":"240 ML",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":4,
+            "description":"DEL MONTE BONE SMART ORANGE...",
+            "price":26.50,
+            "weight":"240 ML",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":5,
+            "description":"DEL MONTE BONE SMART PINEAPPLE...",
+            "price":26.50,
+            "weight":"240 ML",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":6,
+            "description":"DEL MONTE 100% FIBER...",
+            "price":24.50,
+            "weight":"240 ML",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":7,
+            "description":"DEL MONTE CANNED JUICE 100%...",
+            "price":79.50,
+            "weight":"1.36L",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":8,
+            "description":"DEL MONTE CANNED JUICE MANGO...",
+            "price":22.00,
+            "weight":"240 ML",
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"

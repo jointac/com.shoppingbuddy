@@ -155,6 +155,32 @@
                 </div>
                 <div class="footer-promopage"><div ng-click="goto(7)"><img src="../www/img/house2.png" class="imggoback"></div></div>
             </div>
+            <div class="productpage-container" ng-show="productpage" ng-style="{height:windowheight}">
+                <div class="productpageleft" style="height:inherit">
+                    <div class="productpageheader">
+                        <img src="../www/img/house2.png" class="imggoback" ng-click="goto(7)">&nbsp;CATEGORY:&nbsp;{{productcategory}}
+                    </div>
+                    <div class="productpagedetail">
+                        <div class="productpagedetailheader">{{subcategory}}</div>
+                        <div class="productpagedetails">
+                            <div class="productpagedetail-item" ng-repeat="item in groceryitem">
+                                <div class="productpage-item" ng-click="gotoproduct(productcategory,item.item)">
+                                    <div class="productdesc">{{item.description}}</div>
+                                    <div class="productdesc">{{item.weight}}</div>
+                                </div>
+                                <div class="productdescprice">P{{item.price}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productpageright" style="height:inherit">
+                    <div class="rightcontainer">
+                        <div class="search">Search</div>
+                    </div>
+                </div>
+            </div>
+            <div class="shoppinglink-container" ng-show="productpagedetail">
+            </div>
         </div>
     </div>
     <script type="text/javascript">
