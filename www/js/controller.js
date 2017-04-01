@@ -1,5 +1,5 @@
 myApp
-.controller("splashpageCtrl", function($scope, $timeout, promoitems, newitem, aisle, grocery, productcat) {
+.controller("splashpageCtrl", function($scope, $timeout, promoitems, newitem, aisle, grocery, productcat, subcat) {
 	$scope.welcomepage = true;
 	$scope.detailpage = false;
 	$timeout(function(){
@@ -98,61 +98,73 @@ myApp
 		switch (link) {
 			case "1":
 				$scope.groceryitem = grocery.freshproduce();
+				$scope.subcat = subcat.freshproduct();
 				$scope.productcategory = "FRESH PRODUCE";
 				$scope.subcategory = "FRUITS";
 				break;
 			case "2":
 				$scope.groceryitem = grocery.meatseafood();
+				$scope.subcat = subcat.meatseafood();
 				$scope.productcategory = "MEAT & SEAFOOD";
 				$scope.subcategory = "";
 				break;
 			case "3":
 				$scope.groceryitem = grocery.dairyegg();
+				$scope.subcat = subcat.dairyegg();
 				$scope.productcategory = "DAIRY & EGGS";
 				$scope.subcategory = "";
 				break;
 			case "4":
 				$scope.groceryitem = grocery.bakery();
+				$scope.subcat = subcat.bakery();
 				$scope.productcategory = "BAKERY";
 				$scope.subcategory = "";
 				break;
 			case "5":
 				$scope.groceryitem = grocery.breakfast();
+				$scope.subcat = subcat.breakfast();
 				$scope.productcategory = "BREAKFAST";
 				$scope.subcategory = "";
 				break;
 			case "6":
 				$scope.groceryitem = grocery.frozen();
+				$scope.subcat = subcat.frozen();
 				$scope.productcategory = "FROZEN GOODS";
 				$scope.subcategory = "";
 				break;
 			case "7":
 				$scope.groceryitem = grocery.pantry();
+				$scope.subcat = subcat.pantry();
 				$scope.productcategory = "PANTRY";
 				$scope.subcategory = "";
 				break;
 			case "8":
 				$scope.groceryitem = grocery.canneditem();
+				$scope.subcat = subcat.canneditem();
 				$scope.productcategory = "CANNED GOODS";
 				$scope.subcategory = "";
 				break;
 			case "9":
 				$scope.groceryitem = grocery.driedfood();
+				$scope.subcat = subcat.driedfood();
 				$scope.productcategory = "PASTA & DRIED GOODS";
 				$scope.subcategory = "";
 				break;
 			case "10":
 				$scope.groceryitem = grocery.beverage();
+				$scope.subcat = subcat.beverage();
 				$scope.productcategory = "BEVERAGE";
 				$scope.subcategory = "JUICES & HEALTH DRINKS";
 				break;
 			case "11":
 				$scope.groceryitem = grocery.healthbeauty();
+				$scope.subcat = subcat.healthbeauty();
 				$scope.productcategory = "HEALTH & BEAUTY";
 				$scope.subcategory = "";
 				break;
 			case "12":
 				$scope.groceryitem = grocery.homecare();
+				$scope.subcat = subcat.homecare();
 				$scope.productcategory = "HOME CARE";
 				$scope.subcategory = "";
 				break;
@@ -172,9 +184,11 @@ myApp
 		$scope.productitem = {};
 		var identity = id - 1;
 		$scope.noitem = 0;
+		$scope.productcategory = cat;
 		switch (cat) {
 			case "FRESH PRODUCE":
 				$scope.productitem = grocery.freshproduce()[identity];
+				$scope.subcategory = "FRUITS";
 				break;
 			case "MEAT & SEAFOOD":
 				$scope.productitem = grocery.meatseafood()[identity];

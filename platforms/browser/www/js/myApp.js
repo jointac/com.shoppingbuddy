@@ -6,42 +6,42 @@ myApp
             "itemamt":"P30.00",
             "promodetail":"BUY 2 TAKE 1 FREE",
             "itemimg":"../www/img/coke.png",
-            "cat":"beverage",
+            "cat":"BEVERAGE",
             "catid":9,
         },{
             "itemdesc":"OREO",
             "itemamt":"P10.00",
             "promodetail":"5% OFF",
             "itemimg":"../www/img/oreo.png",
-            "cat":"driedfood",
+            "cat":"PASTA & DRIED GOODS",
             "catid":3,
         },{
             "itemdesc":"DOVE",
             "itemamt":"P45.00",
             "promodetail":"5% OFF",
             "itemimg":"../www/img/dove.png",
-            "cat":"healthbeauty",
+            "cat":"HEALTH & BEAUTY",
             "catid":1,
         },{
             "itemdesc":"JOY DISHWASHING LIQUID",
             "itemamt":"P40.00",
             "promodetail":"5% OFF",
             "itemimg":"../www/img/joy.png",
-            "cat":"homecare",
+            "cat":"HOME CARE",
             "catid":1,
         },{
             "itemdesc":"CHAMPION DETERGENT",
             "itemamt":"P6.00",
             "promodetail":"2 FOR P10.00",
             "itemimg":"../www/img/champ.png",
-            "cat":"homecare",
+            "cat":"HOME CARE",
             "catid":2,
         }, {
             "itemdesc":"LUCKY ME! PANCIT CANTON CHILI MANSI",
             "itemamt":"P6.00",
             "promodetail":"2 FOR P10.00",
             "itemimg":"../www/img/luckyme.gif",
-            "cat":"driedfood",
+            "cat":"PASTA & DRIED GOODS",
             "catid":4,
         }];
     return promoitems;
@@ -368,6 +368,16 @@ myApp
             "rightdesc":"6 months shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":3,
+            "description":"MAGGI MAGIC ISDA",
+            "price":36.00,
+            "weight":1,
+            "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"6 months shelf life",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
         }];
         return items;
     };
@@ -430,6 +440,16 @@ myApp
             "item":4,
             "description":"LUCKY ME! PANCIT CANTON CHILI MANSI",
             "price":10.00,
+            "weight":"200gms",
+            "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":5,
+            "description":"BOY BAWANG BAKED BARBEQUE FLAVOR",
+            "price":32.00,
             "weight":"200gms",
             "nutritionfacts":"item",
             "leftdesc":"--",
@@ -530,6 +550,16 @@ myApp
             "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":9,
+            "description":"KOPIKO CAFE BLANCA",
+            "price":6.00,
+            "weight":"30 grams",
+            "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
         }];
         return items;
     };
@@ -538,6 +568,16 @@ myApp
             "item":1,
             "description":"Dove",
             "price":45.00,
+            "weight":"200 g",
+            "nutritionfacts":"item",
+            "leftdesc":" ",
+            "rightdesc":"1 year shelf life",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        },{
+            "item":2,
+            "description":"SUNSILK LONG & HEALTHY GROWTH",
+            "price":132.00,
             "weight":"200 g",
             "nutritionfacts":"item",
             "leftdesc":" ",
@@ -560,8 +600,8 @@ myApp
             "barcodeimg":"../www/img/barcode.png"
         }, {
             "item":2,
-            "description":"Champion Detergent Powder",
-            "price":40,
+            "description":"SUNSILK LONG & HEALTHY GROWTH",
+            "price":132.00,
             "weight":'750 ml',
             "nutritionfacts":"item",
             "leftdesc":" ",
@@ -573,31 +613,190 @@ myApp
     };
     return groceryitem;
 })
+.factory('subcat', function(){
+    var subcatitem = {};
+    subcatitem.freshproduce = function() {
+        var items = [{
+            "item":1,
+            "subcat":"FRUITS",
+        }, {
+            "item":2,
+            "subcat":"VEGETABLES",
+        }];
+        return items;
+    };
+    subcatitem.meatseafood = function() {
+        var items = [{
+            "item":1,
+            "subcat":"BEEF",
+        }, {
+            "item":2,
+            "subcat":"FISH",
+        }, {
+            "item":3,
+            "subcat":"POULTRY",
+        }, {
+            "item":4,
+            "subcat":"CHICKEN",
+        }, {
+            "item":5,
+            "subcat":"PORK",
+        }];
+        return items;
+    };
+
+    subcatitem.dairyegg = function() {
+        var items = [{
+            "item":1,
+            "subcat":"BUTTER",
+        }, {
+            "item":2,
+            "subcat":"MILK",
+        }, {
+            "item":3,
+            "subcat":"EGGS",
+        }];
+        return items;
+    };
+
+    subcatitem.bakery = function() {
+        var items = [{
+            "item":1,
+            "subcat":"BREAD",
+        }, {
+            "item":2,
+            "subcat":"TORTILLA",
+        }];
+        return items;
+    };
+
+    subcatitem.breakfast = function() {
+        var items = [{
+            "item":1,
+            "subcat":"CEREAL",
+        }, {
+            "item":2,
+            "subcat":"PANCAKES",
+        }];
+        return items;
+    };
+
+    subcatitem.frozen = function() {
+        var items = [{
+            "item":1,
+            "subcat":"ICE CREAM",
+        }, {
+            "item":2,
+            "subcat":"VEGETABLES",
+        }];
+        return items;
+    };
+    subcatitem.pantry = function() {
+        var items = [{
+            "item":1,
+            "subcat":"CONDIMENTS",
+        }, {
+            "item":2,
+            "subcat":"SEASONINGS",
+        }];
+        return items;
+    };
+    subcatitem.canneditem = function() {
+        var items = [{
+            "item":1,
+            "subcat":"PORK",
+        }, {
+            "item":2,
+            "subcat":"FRUIT",
+        }];
+        return items;
+    };
+    subcatitem.driedfood = function() {
+        var items = [{
+            "item":1,
+            "subcat":"PASTA",
+        }, {
+            "item":2,
+            "subcat":"SNACKS",
+        }];
+        return items;
+    };
+    subcatitem.beverage = function() {
+        var items = [{
+            "item":1,
+            "subcat":"COCOA & DRINK MIXES",
+        }, {
+            "item":2,
+            "subcat":"COFFEE",
+        }, {
+            "item":3,
+            "subcat":"ENERGY & SPORT DRINKS",
+        }, {
+            "item":4,
+            "subcat":"JUICES & HEALTH DRINKS",
+        }, {
+            "item":5,
+            "subcat":"SOFT DRINKS",
+        }, {
+            "item":6,
+            "subcat":"TEA",
+        }, {
+            "item":7,
+            "subcat":"WATER, SELTZER & SPARKLING WATER",
+        }];
+        return items;
+    };
+    subcatitem.healthbeauty = function() {
+        var items = [{
+            "item":1,
+            "subcat":"SHAMPOO",
+        }, {
+            "item":2,
+            "subcat":"BATH SOAP",
+        }];
+        return items;
+    };
+    subcatitem.homecare = function() {
+        var items = [{
+            "item":1,
+            "subcat":"HOUSE CLEANER",
+        }, {
+            "item":2,
+            "subcat":"KITCHEN CLEANER",
+        }];
+        return items;
+    };
+    return subcatitem;
+})
 .factory('newitem', function(){
     var newitems = [{
             "itemdesc":"MAGGI MAGIC ISDA",
             "itemamt":"P36.00",
             "promodetail":"8G 12'S",
             "itemimg":"../www/img/maggieisda.png",
-            "cat":"driedfood",
+            "cat":"PANTRY",
+            "catid":3,
         },{
             "itemdesc":"BOY BAWANG BAKED BARBEQUE FLAVOR",
             "itemamt":"P32.00",
             "promodetail":"50G",
             "itemimg":"../www/img/bbawang.jpg",
-            "cat":"driedfood",
+            "cat":"PASTA & DRIED GOODS",
+            "catid":5
         },{
             "itemdesc":"SUNSILK LONG & HEALTHY GROWTH",
             "itemamt":"P132.00",
             "promodetail":"",
             "itemimg":"../www/img/sunsilk.png",
-            "cat":"driedfood",
+            "cat":"HEALTH & BEAUTY",
+            "catid":2
         },{
             "itemdesc":"KOPIKO CAFE BLANCA",
             "itemamt":"P6.00",
             "promodetail":"30G",
             "itemimg":"../www/img/kopiko.png",
-            "cat":"driedfood",
+            "cat":"BEVERAGE",
+            "catid":10
         }];
     return newitems;
 })

@@ -52,7 +52,7 @@
             <div class="welcome-header  header-font">WELCOME SHOPPERS</div>
             <div class="welcome-logo"></div>
         </div>
-        <div ng-show="detailpage">
+        <div ng-show="detailpage" style="background-color:#e6e7e8;">
             <div><div class="shopping-header" ng-include="'template/header.tpl.html'"></div></div>
             <div class="shoppingdetail-container" ng-show="pricingdetail">
                 <div class="overlay">
@@ -75,7 +75,7 @@
                     <div class="aisle-header"><div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
                     <div class="aisleheader">WHAT'S NEW?</div><div class="rightcol"></div></div>
                     <div class="promoitem-details" style="height:100%;">
-                        <div ng-repeat="item in whatsnew" class="item-container">
+                        <div ng-repeat="item in whatsnew" class="item-container" ng-click="gotoproduct(item.cat, item.catid)">
                             <div class="itemimg-container">
                                 {{item.itemdesc}}
                                 <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
@@ -110,7 +110,7 @@
                     <div class="aisle-header"><div class="goback"><img src="../www/img/house2.png" class="imggoback" ng-click="goto(0)"></div>
                     <div class="aisleheader">PROMOTIONAL ITEMS!<div class="promoitem-description">CHECK IT OUT UNTIL SUPPLIES LAST!</div></div><div class="rightcol"></div></div>
                     <div class="promoitem-details" style="height:100%;">
-                        <div ng-repeat="item in prmitems" class="item-container">
+                        <div ng-repeat="item in prmitems" class="item-container" ng-click="gotoproduct(item.cat, item.catid)">
                             <div class="itemimg-container">
                                 {{item.itemdesc}}
                                 <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
@@ -174,8 +174,11 @@
                     </div>
                 </div>
                 <div class="productpageright" style="height:inherit">
-                    <div class="rightcontainer">
+                    <div class="rightcontainer" style="overflow:auto">
                         <div class="search">Search</div>
+                        <div class="subcatitems" ng-repeat="item in subcat">
+                            {{item.subcat}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,7 +224,7 @@
                         <div class="shoppingcart">MY</div>
                         <div class="shoppingcart-items">
                             <div class="shoppingcart-item" ng-repeat="item in shoppingcart">
-                                {{item.description}}-------{{item.amt}} <a class="removebtn" ng-click="removeitem(item.itemid, item.amt)">Remove</a>
+                                {{item.description}}------{{item.amt}} <a class="removebtn" ng-click="removeitem(item.itemid, item.amt)">Remove</a>
                             </div>
                         </div>
                         <div class="shopping-total">
