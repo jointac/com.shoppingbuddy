@@ -220,20 +220,30 @@ myApp
 	}
 	$scope.addtocart = function(item, amt, cat, id) {
 		var newitem =  {};
-		var newamt = amt * $scope.noitem;		
+		var newamt = amt * $scope.noitem;
 		if (newamt > 0 && $scope.budget > ($scope.totalamt + newamt)) {
-			newitem = {
+			newitem =  {
 				"description": item,
 				"amt": "P " + newamt.toString(),
 				"cat": cat,
-				"id": id
+				"id": id,
+				"itemid" : cat + "_" + id.toString(),
 			}
+			alert(cat + "_" + id.toString());
 			$scope.shoppingcart.push(newitem);
 			$scope.totalamt+=newamt;
 	    	$scope.rembudget = $scope.budget - $scope.totalamt;
 		} else {
 			alert("You don't have enough budget.");
 		}
+	}
+	$scope.removeitem = function(itemid, amt) {
+		$scope.totalamt-=parseInt(amt.substring(2));
+		var newitems = $scope.shoppingcart.filter(function(el){
+			return el.itemid !== itemid;
+		});
+		$scope.shoppingcart = newitems;
+
 	}
 })
 .controller('headerCtrl', function($scope){

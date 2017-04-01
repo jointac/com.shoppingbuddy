@@ -127,7 +127,7 @@ h1 {
 .splashcontainer, .shopping-container { width:100%; height:100vh; background-color:#E6E7E8; }
 .overlay {height:inherit;background-color:rgba(255,255,255,0.5);}
 /**splash page**/
-.splashcontainer, .shoppingdetail-container { background-image: url("../www/img/aisle.jpg");background-size:cover;background-size:100% 100%;background-position:center;}
+.splashcontainer, .shoppingdetail-container { background-image: url("../www/img/aisle.jpg");background-size:cover;background-position:center;}
 .welcome-header { margin:0 auto; width: 90%; text-align:center; padding-top:50px; }
 /**shopping-details**/
 .shoppingdetail-container { width:100%;margin:0 auto;text-align:center; height:100%;}
@@ -140,7 +140,7 @@ h1 {
 /**whatsnew**/
 .whatsnewdesc {background-color:#1FAC89;height:56px;padding:5px 10px; font-size:16px; text-align:center;}
 /*shoppinglinks**/
-.shoppinglink-container {width:100%;display:block;}
+.shoppinglink-container {width:100%;display:block;overflow: auto;}
 .shoppinglink-container .div {width:20%;float:left;text-align:center;height:inherit;background-size:cover;background-position:center;}
 .whats-new {background-image:url("../www/img/whatsnew.jpg");}
 .aisles {background-image:url("../www/img/aisle-2.jpg");}
@@ -189,11 +189,16 @@ h1 {
 .rightcontainer {border-left:grey 1px solid;height:inherit;}
 /**item page**/
 .productpageitemdetails {width:inherit;padding:10px; overflow:auto;}
-.productitempage-item { width:40%;float:left:padding:20px; }
-.productitempage-scan { width:30%;float:left:padding:20px; }
-.productitempage-scan .productpage-item {background-color:#fff;padding:10px;height:170px;width:100%;}
+.productitempage-scan { width:50%;float:left:padding:20px; }
+.productitempage-item { width:50%;float:left:padding:20px; }
+.productitempage-scan .productpageitem-item, .productitempage-item .productpageitem-item {padding:10px;height:170px;width:100%;}
+.productitempage-item .productpageitem-item {height:auto;}
 .itemshop-left, .itemshop-right {width:50%; float:left;text-align:center;}
 .plus, .sub {font-size:30px;width:25%;float:left;text-align:center;}
 .noitem {font-size:30px;width:50%;float:left;text-align:center;}
 .itemprice {font-size:35px;color:#A7D3ED;font-weight:bold;text-align:center;}
 .itemshop-add .itemshop-right {font-size:25px;}
+.removebtn {padding:10px;color:#fff;background-color:#D44F54;border-radius:2px;font-size:16px;}
+.itemshop, .itemshop-add {width:100%; padding-top:20px;}
+.item-inner-container {padding:1px;}
+.border {border:1px solid #000;}

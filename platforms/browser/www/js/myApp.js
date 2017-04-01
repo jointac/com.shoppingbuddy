@@ -205,6 +205,8 @@ myApp
             "price":78.00,
             "weight":"PER 1KG",
             "nutritionfacts":"item",
+            "leftdesc":"4-5 days to ripe",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -213,6 +215,8 @@ myApp
             "price":50.75,
             "weight":"PER 1KG",
             "nutritionfacts":"item",
+            "leftdesc":"4-5 days to ripe",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -226,6 +230,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":" ",
+            "rightdesc":"1-3 days in freezer",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -234,6 +240,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":" ",
+            "rightdesc":"1-3 days in freezer",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -247,6 +255,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -255,6 +265,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -268,6 +280,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -276,6 +290,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -289,6 +305,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -297,6 +315,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -310,6 +330,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"6 months in freezer",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -318,6 +340,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"6 months in freezer",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -330,6 +354,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"6 months shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -338,6 +364,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"6 months shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -350,6 +378,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -358,6 +388,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -370,6 +402,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -378,6 +412,8 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -386,6 +422,8 @@ myApp
             "price":10.00,
             "weight":"200gms",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -394,6 +432,8 @@ myApp
             "price":10.00,
             "weight":"200gms",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -406,6 +446,8 @@ myApp
             "price":55.00,
             "weight":"250 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -414,6 +456,8 @@ myApp
             "price":204.50,
             "weight":"750 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -422,6 +466,8 @@ myApp
             "price":27.95,
             "weight":"240 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -430,6 +476,8 @@ myApp
             "price":26.50,
             "weight":"240 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -438,6 +486,8 @@ myApp
             "price":26.50,
             "weight":"240 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -446,6 +496,8 @@ myApp
             "price":24.50,
             "weight":"240 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -454,6 +506,8 @@ myApp
             "price":79.50,
             "weight":"1.36L",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -462,6 +516,8 @@ myApp
             "price":22.00,
             "weight":"240 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -470,6 +526,8 @@ myApp
             "price":30.00,
             "weight":"375 ML",
             "nutritionfacts":"item",
+            "leftdesc":"--",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -482,6 +540,8 @@ myApp
             "price":45.00,
             "weight":"200 g",
             "nutritionfacts":"item",
+            "leftdesc":" ",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];
@@ -494,6 +554,8 @@ myApp
             "price":40,
             "weight":'750 ml',
             "nutritionfacts":"item",
+            "leftdesc":" ",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
@@ -502,6 +564,8 @@ myApp
             "price":40,
             "weight":'750 ml',
             "nutritionfacts":"item",
+            "leftdesc":" ",
+            "rightdesc":"1 year shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }];

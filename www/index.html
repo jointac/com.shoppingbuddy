@@ -179,7 +179,7 @@
                     </div>
                 </div>
             </div>
-            <div class="shoppinglink-container" ng-show="productpageitem">
+            <div class="shoppinglink-container" ng-show="productpageitem" style="background-color:#e6e7e8;">
                 <div class="productpageheader" style="width:100%">
                     <img src="../www/img/house2.png" class="imggoback" ng-click="goto(7)">&nbsp;CATEGORY:&nbsp;{{productcategory}}
                 </div>
@@ -188,24 +188,27 @@
                         <div class="productpagedetailheader">{{subcategory}}</div>
                         <div class="productpageitemdetails">
                             <div class="productitempage-scan">
-                                <div class="productpage-item">
-                                    <div class="productdesc"><h2>SCAN HERE</h2></div>
-                                    <div class="productdesc"></div>
+                                <div class="productpageitem-item">
+                                    <div style="background-color:#fff;height:inherit">
+                                        <div class="productdesc"><h2>SCAN HERE</h2></div>
+                                        <div class="productdesc"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="productitempage-item">
-                                <div class="productpage-item">
+                                <div class="productpageitem-item">
+                                    <div style="background-color:#fff">
                                     <div class="productdesc">{{productitem.description}}</div>
                                     <div class="productdesc">{{productitem.weight}}</div>
-                                    <div class="itemprice">P&nbsp;{{productitem.price}}</div>
-                                </div>
-                                <div class="itemshop">
-                                    <div class="itemshop-left"></div>
-                                    <div class="itemshop-right"></div>
-                                </div>
-                                <div class="itemshop-add">
-                                    <div class="itemshop-left"><div class="plus" ng-click="additem()">+</div><div class="noitem">{{noitem}}</div><div class="sub" ng-click="subtractitem()">-</div></div>
-                                    <div class="itemshop-right" ng-click="addtocart(productitem.description, productitem.price, productcategory, productitem.id)">ADD TO CART</div>
+                                    <div class="itemprice">P&nbsp;{{productitem.price}}</div></div>
+                                    <div class="itemshop" style="background-color:#fff;">
+                                        <div class="itemshop-left"><div class="item-inner-container border">{{productitem.leftdesc}}</div></div>
+                                        <div class="itemshop-right"><div class="item-inner-container border">{{productitem.rightdesc}}</div></div>
+                                    </div>
+                                    <div class="itemshop-add" style="background-color:#A7D3ED;">
+                                        <div class="itemshop-left"><div class="plus" ng-click="additem()">+</div><div class="noitem">{{noitem}}</div><div class="sub" ng-click="subtractitem()">-</div></div>
+                                        <div class="itemshop-right" ng-click="addtocart(productitem.description, productitem.price, productcategory, productitem.item)">ADD TO CART</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -215,10 +218,10 @@
                 </div>
                 <div class="productpageright" style="height:inherit">
                     <div class="rightcontainer">
-                        <div class="shoppingcart">MY SHOPPING CART</div>
+                        <div class="shoppingcart">MY</div>
                         <div class="shoppingcart-items">
                             <div class="shoppingcart-item" ng-repeat="item in shoppingcart">
-                                {{item.description}}-------{{item.amt}}
+                                {{item.description}}-------{{item.amt}} <a class="removebtn" ng-click="removeitem(item.itemid, item.amt)">Remove</a>
                             </div>
                         </div>
                         <div class="shopping-total">
