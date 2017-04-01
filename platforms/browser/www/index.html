@@ -179,7 +179,54 @@
                     </div>
                 </div>
             </div>
-            <div class="shoppinglink-container" ng-show="productpagedetail">
+            <div class="shoppinglink-container" ng-show="productpageitem">
+                <div class="productpageheader" style="width:100%">
+                    <img src="../www/img/house2.png" class="imggoback" ng-click="goto(7)">&nbsp;CATEGORY:&nbsp;{{productcategory}}
+                </div>
+                <div class="productpageleft" style="height:inherit">
+                    <div class="productpagedetail">
+                        <div class="productpagedetailheader">{{subcategory}}</div>
+                        <div class="productpageitemdetails">
+                            <div class="productitempage-scan">
+                                <div class="productpage-item">
+                                    <div class="productdesc"><h2>SCAN HERE</h2></div>
+                                    <div class="productdesc"></div>
+                                </div>
+                            </div>
+                            <div class="productitempage-item">
+                                <div class="productpage-item">
+                                    <div class="productdesc">{{productitem.description}}</div>
+                                    <div class="productdesc">{{productitem.weight}}</div>
+                                    <div class="itemprice">P&nbsp;{{productitem.price}}</div>
+                                </div>
+                                <div class="itemshop">
+                                    <div class="itemshop-left"></div>
+                                    <div class="itemshop-right"></div>
+                                </div>
+                                <div class="itemshop-add">
+                                    <div class="itemshop-left"><div class="plus" ng-click="additem()">+</div><div class="noitem">{{noitem}}</div><div class="sub" ng-click="subtractitem()">-</div></div>
+                                    <div class="itemshop-right" ng-click="addtocart(productitem.description, productitem.price, productcategory, productitem.id)">ADD TO CART</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="locateproduct">
+                        </div>
+                    </div>
+                </div>
+                <div class="productpageright" style="height:inherit">
+                    <div class="rightcontainer">
+                        <div class="shoppingcart">MY SHOPPING CART</div>
+                        <div class="shoppingcart-items">
+                            <div class="shoppingcart-item" ng-repeat="item in shoppingcart">
+                                {{item.description}}-------{{item.amt}}
+                            </div>
+                        </div>
+                        <div class="shopping-total">
+                            <div class="budget">BUDGET: <br>{{budget}}</div>
+                            <div class="budget">TOTAL: <br>{{totalamt}}</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -179,11 +179,21 @@ h1 {
 .productpageleft {width:70%;float:left;}
 .productpageright {width:30%;float:left;height:100%;}
 .productpageheader, .search {height:60px;background-color:#A7D3ED;padding:20px;font-size:30px;}
-.productpagedetail {width:inherit;}
+.productpagedetail {width:100%;}
 .productpagedetails {width:100%;}
 .productpagedetail-item {width:25%;float:left;padding:20px;}
 .productpagedetailheader { padding:15px 20px; }
 .productpage-item {background-color:#fff;padding:10px;height:200px;width:100%;}
-.productdesc {font-size:20px;text-align:center;width:inherit;}
+.productdesc {font-size:20px;text-align:center;width:100%;}
 .productdescprice {font-size:22px;text-align:center;padding:10px;background-color:#243E8A;color:#fff;width:100%;}
 .rightcontainer {border-left:grey 1px solid;height:inherit;}
+/**item page**/
+.productpageitemdetails {width:inherit;padding:10px; overflow:auto;}
+.productitempage-item { width:40%;float:left:padding:20px; }
+.productitempage-scan { width:30%;float:left:padding:20px; }
+.productitempage-scan .productpage-item {background-color:#fff;padding:10px;height:170px;width:100%;}
+.itemshop-left, .itemshop-right {width:50%; float:left;text-align:center;}
+.plus, .sub {font-size:30px;width:25%;float:left;text-align:center;}
+.noitem {font-size:30px;width:50%;float:left;text-align:center;}
+.itemprice {font-size:35px;color:#A7D3ED;font-weight:bold;text-align:center;}
+.itemshop-add .itemshop-right {font-size:25px;}

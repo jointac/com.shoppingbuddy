@@ -6,31 +6,43 @@ myApp
             "itemamt":"P30.00",
             "promodetail":"BUY 2 TAKE 1 FREE",
             "itemimg":"../www/img/coke.png",
+            "cat":"beverage",
+            "catid":9,
         },{
             "itemdesc":"OREO",
             "itemamt":"P10.00",
             "promodetail":"5% OFF",
             "itemimg":"../www/img/oreo.png",
+            "cat":"driedfood",
+            "catid":3,
         },{
             "itemdesc":"DOVE",
             "itemamt":"P45.00",
             "promodetail":"5% OFF",
             "itemimg":"../www/img/dove.png",
+            "cat":"healthbeauty",
+            "catid":1,
         },{
             "itemdesc":"JOY DISHWASHING LIQUID",
             "itemamt":"P40.00",
             "promodetail":"5% OFF",
             "itemimg":"../www/img/joy.png",
+            "cat":"homecare",
+            "catid":1,
         },{
             "itemdesc":"CHAMPION DETERGENT",
             "itemamt":"P6.00",
             "promodetail":"2 FOR P10.00",
             "itemimg":"../www/img/champ.png",
+            "cat":"homecare",
+            "catid":2,
         }, {
             "itemdesc":"LUCKY ME! PANCIT CANTON CHILI MANSI",
             "itemamt":"P6.00",
             "promodetail":"2 FOR P10.00",
             "itemimg":"../www/img/luckyme.gif",
+            "cat":"driedfood",
+            "catid":4,
         }];
     return promoitems;
 })
@@ -302,7 +314,7 @@ myApp
             "barcodeimg":"../www/img/barcode.png"
         }, {
             "item":2,
-            "description":"Poultry",
+            "description":"Chicken Popcorn",
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
@@ -314,7 +326,7 @@ myApp
     groceryitem.pantry = function() {
         var items = [{
             "item":1,
-            "description":"Flour",
+            "description":"Soy Sauce",
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
@@ -322,7 +334,7 @@ myApp
             "barcodeimg":"../www/img/barcode.png"
         }, {
             "item":2,
-            "description":"Flour",
+            "description":"Fish Sauce",
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
@@ -365,6 +377,22 @@ myApp
             "description":"Rice",
             "price":5,
             "weight":1,
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":3,
+            "description":"Oreo",
+            "price":10.00,
+            "weight":"200gms",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":4,
+            "description":"LUCKY ME! PANCIT CANTON CHILI MANSI",
+            "price":10.00,
+            "weight":"200gms",
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -436,23 +464,23 @@ myApp
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
+        }, {
+            "item":9,
+            "description":"COCA COLA CAN",
+            "price":30.00,
+            "weight":"375 ML",
+            "nutritionfacts":"item",
+            "itemimg":"../www/img/coke.png",
+            "barcodeimg":"../www/img/barcode.png"
         }];
         return items;
     };
     groceryitem.healthbeauty = function() {
         var items = [{
             "item":1,
-            "description":"Coke",
-            "price":5,
-            "weight":1,
-            "nutritionfacts":"item",
-            "itemimg":"../www/img/coke.png",
-            "barcodeimg":"../www/img/barcode.png"
-        }, {
-            "item":2,
-            "description":"Iced Tea",
-            "price":5,
-            "weight":1,
+            "description":"Dove",
+            "price":45.00,
+            "weight":"200 g",
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -462,17 +490,17 @@ myApp
     groceryitem.homecare = function() {
         var items = [{
             "item":1,
-            "description":"Coke",
-            "price":5,
-            "weight":1,
+            "description":"Joy Dishwashing Liquid",
+            "price":40,
+            "weight":'750 ml',
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
             "item":2,
-            "description":"Iced Tea",
-            "price":5,
-            "weight":1,
+            "description":"Champion Detergent Powder",
+            "price":40,
+            "weight":'750 ml',
             "nutritionfacts":"item",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -486,22 +514,26 @@ myApp
             "itemdesc":"MAGGI MAGIC ISDA",
             "itemamt":"P36.00",
             "promodetail":"8G 12'S",
-            "itemimg":"../www/img/maggieisda.png"
+            "itemimg":"../www/img/maggieisda.png",
+            "cat":"driedfood",
         },{
             "itemdesc":"BOY BAWANG BAKED BARBEQUE FLAVOR",
             "itemamt":"P32.00",
             "promodetail":"50G",
-            "itemimg":"../www/img/bbawang.jpg"
+            "itemimg":"../www/img/bbawang.jpg",
+            "cat":"driedfood",
         },{
             "itemdesc":"SUNSILK LONG & HEALTHY GROWTH",
             "itemamt":"P132.00",
             "promodetail":"",
-            "itemimg":"../www/img/sunsilk.png"
+            "itemimg":"../www/img/sunsilk.png",
+            "cat":"driedfood",
         },{
             "itemdesc":"KOPIKO CAFE BLANCA",
             "itemamt":"P6.00",
             "promodetail":"30G",
-            "itemimg":"../www/img/kopiko.png"
+            "itemimg":"../www/img/kopiko.png",
+            "cat":"driedfood",
         }];
     return newitems;
 })
