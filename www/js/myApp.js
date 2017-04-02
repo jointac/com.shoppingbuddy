@@ -230,7 +230,7 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
-            "leftdesc":" ",
+            "leftdesc":"FRESH",
             "rightdesc":"1-3 days in freezer",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -240,7 +240,7 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
-            "leftdesc":" ",
+            "leftdesc":"FRESH",
             "rightdesc":"1-3 days in freezer",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -255,7 +255,7 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
-            "leftdesc":"--",
+            "leftdesc":"FRESH",
             "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -265,7 +265,7 @@ myApp
             "price":5,
             "weight":1,
             "nutritionfacts":"item",
-            "leftdesc":"--",
+            "leftdesc":"FRESH",
             "rightdesc":"1-3 day shelf life",
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
@@ -551,7 +551,7 @@ myApp
             "itemimg":"../www/img/coke.png",
             "barcodeimg":"../www/img/barcode.png"
         }, {
-            "item":9,
+            "item":10,
             "description":"KOPIKO CAFE BLANCA",
             "price":6.00,
             "weight":"30 grams",
