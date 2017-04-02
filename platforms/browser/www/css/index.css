@@ -168,11 +168,11 @@ h1 {
 .aisleheader {width:60%;float:left;}
 .imggoback {cursor:pointer;max-height:50px;max-width:50px;width:auto;height:auto;}
 /**productcat**/
-.productcat-container {background-color:rgba(62,150,219,0.9);height:160px;padding:10px;font-size:12px;text-align:center;color:#000;}
+.productcat-container {background-color:rgba(36,62,138,0.9);height:160px;padding:10px;font-size:12px;text-align:center;color:#000;}
 .footer-promopage {width:100%;}
 .footer-promopage .left, .footer-promopage .right {width:50%;float:left;}
 .footer-promopage .right {text-align:right;}
-.overlaycatitem {background-color:rgba(255,255,255,0.5);height:100%;}
+.overlaycatitem {background-color:rgba(255,255,255,0.5);height:100%;border-right:1px solid grey;}
 .productcatitem-container {width:16.66%;float:left;background-size:cover;background-position:center;height:100%;}
 .productitem-container {background-color:lightgrey;}
 /**product page**/
