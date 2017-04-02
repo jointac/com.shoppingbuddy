@@ -243,7 +243,6 @@ myApp
 				"id": id,
 				"itemid" : cat + "_" + id.toString(),
 			}
-			alert(cat + "_" + id.toString());
 			$scope.shoppingcart.push(newitem);
 			$scope.totalamt+=newamt;
 	    	$scope.rembudget = $scope.budget - $scope.totalamt;
