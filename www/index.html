@@ -60,7 +60,7 @@
                     <div class="input-text"><input class="input-style" type="text" placeholder="Amount" ng-model="splashpage.txtAmt"></div>
                     <div class="welcome-description">ENTER DESIRED BUDGET</div>
                     <div class="errormsg" ng-show="error">Please enter a valid amount.</div>
-                    <div class="welcome-button"><a class="btn-class" ng-click="proceednow()">PROCEED</a></div>
+                    <div class="welcome-button"><a class="btn-class" href="index2.html">PROCEED</a></div>
                 </div>
             </div>
             <div class="shoppinglink-container" ng-show="shoppinglinks" style="height:550px">
@@ -126,7 +126,7 @@
             <div class="shoppinglink-container" ng-show="productcat1" ng-style="{height:windowheight}">
                 <div class="aisle-header">
                     <div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">PRODUCT CATEGORIES</div><div class="rightcol"></div>
+                    <div class="aisleheader">PRODUCT</div><div class="rightcol"></div>
                 </div>
                 <div class="productitem-container" style="height:100%;width:100%">
                     <div ng-repeat="item in products1" class="productcatitem-container" ng-style="{'background-image':'url({{item.background}})'}">
@@ -146,7 +146,7 @@
             <div class="shoppinglink-container" ng-show="productcat2" ng-style="{height:windowheight}">
                 <div class="aisle-header">
                     <div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">PRODUCT CATEGORIES</div> <div class="rightcol"></div>
+                    <div class="aisleheader">PRODUCT</div> <div class="rightcol"></div>
                 </div>
                 <div class="productitem-container" style="height:100%;width:100%">
                     <div ng-repeat="item in products2" class="productcatitem-container" ng-style="{'background-image':'url({{item.background}})'}">

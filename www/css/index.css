@@ -32,16 +32,16 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-color:#E6E7E8;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E6E7E8 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E6E7E8 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E6E7E8 51%);
     background-image:-webkit-gradient(
         linear,
         left top,
         left bottom,
         color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
+        color-stop(0.51, #E6E7E8)
     );
     background-attachment:fixed;
     /*font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
@@ -139,7 +139,7 @@ h1 {
 .splashcontainer, .shoppingdetail-container { background-image: url("../img/aisle.jpg");background-size:cover;background-position:center;}
 .welcome-header { margin:0 auto; width: 90%; text-align:center; padding-top:50px; }
 /**shopping-details**/
-.shoppingdetail-container { width:100%;margin:0 auto;text-align:center; height:100%;}
+.shoppingdetail-container { width:100%;margin:0 auto;text-align:center; height:100vh;}
 .shop-header { height:50px; width:100vw; background-color:#243E8A; color:#fff; font-size:12px; padding-top:10px;}
 .welcome-button {margin:20px;}
 .errormsg {color:red;font-weight: bold;}
@@ -149,8 +149,8 @@ h1 {
 /**whatsnew**/
 .whatsnewdesc {background-color:#1FAC89;height:56px;padding:5px 10px; font-size:16px; text-align:center;}
 /*shoppinglinks**/
-.shoppinglink-container {width:100%;display:block;overflow: auto;}
-.shoppinglink-container .div {width:20%;float:left;text-align:center;height:inherit;background-size:100% 100%;background-position:center;}
+.shoppinglink-container {width:100%;display:block;overflow:auto;}
+.shoppinglink-container .div {width:20%;float:left;text-align:center;height:100vh;background-size:cover;background-position:center;}
 .whats-new {background-image:url("../img/whatsnew.jpg");}
 .aisles {background-image:url("../img/aisle-2.jpg");}
 .start-shopping {background-image:url("../img/start.jpg");}
@@ -183,7 +183,7 @@ h1 {
 .footer-promopage .right {text-align:right;}
 .overlaycatitem {background-color:rgba(255,255,255,0.5);height:100%;border-right:1px solid grey;}
 .productcatitem-container {width:16.66%;float:left;background-size:cover;background-position:center;height:100%;}
-.productitem-container {background-color:lightgrey;}
+.productitem-container {background-color:#E6E7E8;}
 /**product page**/
 .productpage-container {width:100%;}
 .productpageleft {width:70%;float:left;}
