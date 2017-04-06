@@ -19,7 +19,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html ng-app="myApp">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -52,13 +52,13 @@
             <div class="app-title">SHOPPINGBUDDY!</div>
             <div class="app-logo">&nbsp;</div>
         </div>
-        <div class="shoppingdetail-container">
-            <div class="shoppinglink-container">
-                <div class="div whats-new"><div class="inner-container overlay"><a href="whatsnew.html" class="acolor">WHAT'S NEW</a></div></div>
-                <div class="div aisles"><div class="inner-container overlay">AISLES</div></div>
-                <div class="div start-shopping"><div class="inner-container overlay">START SHOPPING</div></div>
-                <div class="div promo-items"><div class="inner-container overlay">PROMO ITEMS</div></div>
-                <div class="div shopper"><div class="inner-container overlay">SHOPPER</div></div>
+        <div class="shoppingdetail-container" ng-show="pricingdetail">
+            <div class="overlay">
+                <div class="welcome-header header-font ">WE'VE GOT IT ALL FOR YOU!</div>
+                <div class="input-text"><input class="input-style" type="text" placeholder="Amount" ng-model="splashpage.txtAmt"></div>
+                <div class="welcome-description">ENTER DESIRED BUDGET</div>
+                <div class="errormsg" ng-show="error">Please enter a valid amount.</div>
+                <div class="welcome-button"><a class="btn-class" href="productcat1.html">PROCEED</a></div>
             </div>
         </div>
     </div>

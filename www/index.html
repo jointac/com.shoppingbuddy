@@ -19,7 +19,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html ng-app="myApp">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -47,205 +47,27 @@
 </head>
 
 <body>
-    <div ng-controller="splashpageCtrl as splashpage" >
+    <div>
         <div class="splashcontainer" ng-show="welcomepage">
             <div class="overlay">
                 <div class="welcome-header  header-font">WELCOME SHOPPERS</div>
                 <div class="welcome-logo"><img src="../www/img/logo.png" class="welcomelogo"></div>
             </div>
         </div>
-        <div ng-show="detailpage" style="background-color:#e6e7e8;">
-            <div><div class="shopping-header" ng-include="'template/header.tpl.html'"></div></div>
-            <div class="shoppingdetail-container" ng-show="pricingdetail">
-                <div class="overlay">
-                    <div class="welcome-header header-font ">WE'VE GOT IT ALL FOR YOU!</div>
-                    <div class="input-text"><input class="input-style" type="text" placeholder="Amount" ng-model="splashpage.txtAmt"></div>
-                    <div class="welcome-description">ENTER DESIRED BUDGET</div>
-                    <div class="errormsg" ng-show="error">Please enter a valid amount.</div>
-                    <div class="welcome-button"><a class="btn-class"  ng-click="proceednow()">PROCEED</a></div>
+        <div style="background-color:#e6e7e8;">
+            <div class="shopping-header">
+                <div class="shop-header">
+                    <div class="app-title">SHOPPINGBUDDY!</div>
+                    <div class="app-logo"><img src="../www/img/logo.png" class="logoimg"></div>
                 </div>
             </div>
-            <div class="shoppinglink-container" ng-show="shoppinglinks" ng-style="{height:linksheight}">
-                <div class="div whats-new"><div class="inner-container overlay" ng-click="goto(1)">WHAT'S NEW</div></div>
-                <div class="div aisles"><div class="inner-container overlay" ng-click="goto(2)">AISLES</div></div>
-                <div class="div start-shopping"><div class="inner-container overlay" ng-click="goto(3)">START SHOPPING</div></div>
-                <div class="div promo-items"><div class="inner-container overlay" ng-click="goto(4)">PROMO ITEMS</div></div>
-                <div class="div shopper"><div class="inner-container overlay">SHOPPER</div></div>
-            </div>
-            <div class="shopping-container" ng-show="whatsnewpage">
-                <div class="promoitem-container" style="height:100%;">
-                    <div class="aisle-header"><div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">WHAT'S NEW?</div><div class="rightcol"></div></div>
-                    <div class="promoitem-details" style="height:100%;">
-                        <div ng-repeat="item in whatsnew" class="item-container" ng-click="gotoproduct(item.cat, item.catid)">
-                            <div class="itemimg-container">
-                                {{item.itemdesc}}
-                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
-                            </div>
-                            <div class="whatsnewdesc">
-                            {{item.itemamt}}<br>
-                            {{item.promodetail}}
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="promoitem-add"></div> -->
-                </div>
-            </div>
-            <div class="shopping-container" ng-show="aislepage" >
-                <div class="promoitem-container" style="height:100%;">
-                    <div class="aisle-header"><div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                        <div class="aisleheader">AISLES</div><div class="rightcol"></div></div>
-                    <div class="promoitem-details" style="height:100%;">
-                        <div ng-repeat="item in aisleitems" class="item-container">
-                            <div class="aislenum">AISLE {{item.aisle}}</div>
-                            <div class="itemimg-container">
-                                <div class="aislecat">{{item.cat}}</div>
-                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
-                                <div class="aisledesc">{{item.description}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shopping-container" ng-show="promopage">
-                <div class="promoitem-container" style="height:100%;">
-                    <div class="aisle-header"><div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">PROMOTIONAL ITEMS!<div class="promoitem-description">CHECK IT OUT UNTIL SUPPLIES LAST!</div></div><div class="rightcol"></div></div>
-                    <div class="promoitem-details" style="height:100%;">
-                        <div ng-repeat="item in prmitems" class="item-container" ng-click="gotoproduct(item.cat, item.catid)">
-                            <div class="itemimg-container">
-                                {{item.itemdesc}}
-                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
-                                <div class="imgamt">{{item.itemamt}}</div>
-                            </div>
-                            <div class="itemdiscount">
-                            {{item.promodetail}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shoppinglink-container" ng-show="productcat1" ng-style="{height:windowheight}">
-                <div class="aisle-header">
-                    <div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">PRODUCT CATEGORIES</div><div class="rightcol"></div>
-                </div>
-                <div class="productitem-container" style="height:100%;width:100%">
-                    <div ng-repeat="item in products1" class="productcatitem-container" ng-style="{'background-image':'url({{item.background}})'}">
-                        <div class="overlaycatitem">
-                        <div style="height:auto;padding-top:100px">
-                            <div class="productcat-container" ng-click="gotocat(item.aisle)">
-                                <div class="aislecat">{{item.cat}}</div>
-                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
-                                <div class="aisledesc">{{item.description}}</div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-promopage"><div class="left" ng-click="goto(3)"><img src="../www/img/Navigate-left-icon.png" class="imggoback"></div><div class="right" ng-click="goto(6)"><img src="../www/img/Navigate-right-icon.png" class="imggoback"></div></div>
-            </div>
-            <div class="shoppinglink-container" ng-show="productcat2" ng-style="{height:windowheight}">
-                <div class="aisle-header">
-                    <div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
-                    <div class="aisleheader">PRODUCT CATEGORIES</div> <div class="rightcol"></div>
-                </div>
-                <div class="productitem-container" style="height:100%;width:100%">
-                    <div ng-repeat="item in products2" class="productcatitem-container" ng-style="{'background-image':'url({{item.background}})'}">
-                        <div class="overlaycatitem">
-                            <div style="height:auto;padding-top:100px">
-                            <div class="productcat-container" ng-click="gotocat(item.aisle)">
-                                <div class="aislecat">{{item.cat}}</div>
-                                <div class="imgdiv"><img src={{item.itemimg}} class="promoimg"></div>
-                                <div class="aisledesc">{{item.description}}</div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-promopage"><div ng-click="goto(7)"><img src="../www/img/Navigate-left-icon.png" class="imggoback"></div></div>
-            </div>
-            <div class="productpage-container" ng-show="productpage" ng-style="{height:windowheight}">
-                <div class="productpageleft" style="height:inherit">
-                    <div class="productpageheader">
-                        <img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(7)">&nbsp;CATEGORY:&nbsp;{{productcategory}}
-                    </div>
-                    <div class="productpagedetail">
-                        <div class="productpagedetailheader">{{subcategory}}</div>
-                        <div class="productpagedetails">
-                            <div class="productpagedetail-item" ng-repeat="item in groceryitem">
-                                <div class="productpage-item" ng-click="gotoproduct(productcategory,item.item)">
-                                    <div class="productdesc">{{item.description}}</div>
-                                    <div class="productdesc">{{item.weight}}</div>
-                                </div>
-                                <div class="productdescprice">P{{item.price}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="productpageright" style="height:inherit">
-                    <div class="rightcontainer" style="overflow:auto">
-                        <div class="search">Search</div>
-                        <div class="subcatitems" ng-repeat="item in subcat">
-                            {{item.subcat}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shoppinglink-container" ng-show="productpageitem" style="background-color:#e6e7e8;">
-                <div class="productpageheader" style="width:100%">
-                    <img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(7)">&nbsp;CATEGORY:&nbsp;{{productcategory}}
-                </div>
-                <div class="productpageleft" style="height:inherit">
-                    <div class="productpagedetail">
-                        <div class="productpagedetailheader">{{subcategory}}</div>
-                        <div class="productpageitemdetails">
-                            <div class="productitempage-scan">
-                                <div class="productpageitem-item">
-                                    <div style="background-color:#fff;height:inherit">
-                                        <div class="productdesc"><h2>SCAN HERE</h2></div>
-                                        <div class="productdesc"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="productitempage-item">
-                                <div class="productpageitem-item">
-                                    <div style="background-color:#fff">
-                                    <div class="productdesc">{{productitem.description}}</div>
-                                    <div class="productdesc">{{productitem.weight}}</div>
-                                    <div class="itemprice">P&nbsp;{{productitem.price}}</div></div>
-                                    <div class="itemshop" style="background-color:#fff;">
-                                        <div class="itemshop-left"><div class="item-inner-container border">{{productitem.leftdesc}}</div></div>
-                                        <div class="itemshop-right"><div class="item-inner-container border">{{productitem.rightdesc}}</div></div>
-                                    </div>
-                                    <div class="itemshop-add">
-                                        <div class="itemshop-left">
-                                            <div class="plus" ng-click="additem()"><div class="item-inner-container border" style="background-color:#A7D3ED;">+</div></div>
-                                            <div class="noitem"><div class="item-inner-container border" style="background-color:#A7D3ED;">{{noitem}}</div></div>
-                                            <div class="sub" ng-click="subtractitem()"><div class="item-inner-container border" style="background-color:#A7D3ED;">-</div></div>
-                                        </div>
-                                        <div class="itemshop-right" ng-click="addtocart(productitem.description, productitem.price, productcategory, productitem.item)"><div class="item-inner-container border" style="background-color:#A7D3ED;">ADD TO CART</div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="locateproduct">
-                        </div>
-                    </div>
-                </div>
-                <div class="productpageright" style="height:inherit">
-                    <div class="rightcontainer">
-                        <div class="shoppingcart">MY SHOPPING CART</div>
-                        <div class="shoppingcart-items">
-                            <div class="shoppingcart-item" ng-repeat="item in shoppingcart">
-                                {{item.description}}------{{item.amt}} <a class="removebtn" ng-click="removeitem(item.itemid, item.amt)">Remove</a>
-                            </div>
-                        </div>
-                        <div class="shopping-total">
-                            <div class="budget"><div class="budget-inner">BUDGET: <br>{{budget}}</div></div>
-                            <div class="budget"><div class="budget-inner">TOTAL: <br>{{totalamt}}</div></div>
-                        </div>
-                    </div>
+            <div class="shoppingdetail-container">
+                <div class="shoppinglink-container">
+                    <div class="div whats-new"><div class="inner-container overlay"><a href="whatsnew.html" class="acolor">WHAT'S NEW</a></div></div>
+                    <div class="div aisles"><div class="inner-container overlay"><a href="aisle.html" class="acolor">AISLES</a></div></div>
+                    <div class="div start-shopping"><div class="inner-container overlay"><a href="index2.html" class="acolor">START SHOPPING</a></div></div>
+                    <div class="div promo-items"><div class="inner-container overlay"><a href="promoitem.html" class="acolor">PROMO ITEMS</a></div></div>
+                    <div class="div shopper"><div class="inner-container overlay">SHOPPER</div></div>
                 </div>
             </div>
         </div>
