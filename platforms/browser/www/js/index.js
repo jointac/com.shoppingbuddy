@@ -49,3 +49,7 @@ var app = {
 };
 
 var $globalbudget = 0;
+
+function goto(page) {
+    window.location = page;
+}

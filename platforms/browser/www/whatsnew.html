@@ -47,20 +47,30 @@
 </head>
 
 <body>
-    <div>
+    <div class="splashcontainer">
         <div class="shop-header">
             <div class="app-title">SHOPPINGBUDDY!</div>
             <div class="app-logo">&nbsp;</div>
         </div>
-        <div class="shoppingdetail-container">
-            <div class="shoppinglink-container">
-                <div class="div whats-new"><div class="inner-container overlay"><a href="whatsnew.html" class="acolor">WHAT'S NEW</a></div></div>
-                <div class="div aisles"><div class="inner-container overlay">AISLES</div></div>
-                <div class="div start-shopping"><div class="inner-container overlay">START SHOPPING</div></div>
-                <div class="div promo-items"><div class="inner-container overlay">PROMO ITEMS</div></div>
-                <div class="div shopper"><div class="inner-container overlay">SHOPPER</div></div>
+        <div class="shopping-container">
+                <div class="promoitem-container" style="height:100%;">
+                    <div class="aisle-header"><div class="goback"><img src="../www/img/home-icon.png" class="imggoback" ng-click="goto(0)"></div>
+                    <div class="aisleheader">WHAT'S NEW?</div><div class="rightcol"></div></div>
+                    <div class="promoitem-details" style="height:100%;">
+                        <div class="item-container">
+                            <div class="itemimg-container">
+                                MAGGI MAGIC ISDA
+                                <div class="imgdiv"><img src="../wwww/img/maggieisda.png" class="promoimg"></div>
+                            </div>
+                            <div class="whatsnewdesc">
+                            P36.00<br>
+                            8G 12'S
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="promoitem-add"></div> -->
+                </div>
             </div>
-        </div>
     </div>
 </body>
 

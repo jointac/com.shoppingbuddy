@@ -28,6 +28,7 @@ myApp
 	$scope.subcategory ='';
 	$scope.noitem = 0;
 	//productcat1
+	$scope.linksheight = ($(window).height() - 50).toString() + "px";
 	$scope.windowheight = "100vh";
 	$scope.proceednow = function() {
 		if ($.isNumeric(ctrl.txtAmt)) {
@@ -95,74 +96,75 @@ myApp
 		$scope.whatsnewpage = false;
 		$scope.productpageitem = false;
 		$scope.productpage = true;
-		switch (link) {
-			case "1":
+		intlink = parseInt(link)
+		switch (intlink) {
+			case 1:
 				$scope.groceryitem = grocery.freshproduce();
-				$scope.subcat = subcat.freshproduct();
+				$scope.subcat = subcat.freshproduce();
 				$scope.productcategory = "FRESH PRODUCE";
 				$scope.subcategory = "FRUITS";
 				break;
-			case "2":
+			case 2:
 				$scope.groceryitem = grocery.meatseafood();
 				$scope.subcat = subcat.meatseafood();
 				$scope.productcategory = "MEAT & SEAFOOD";
 				$scope.subcategory = "";
 				break;
-			case "3":
+			case 3:
 				$scope.groceryitem = grocery.dairyegg();
 				$scope.subcat = subcat.dairyegg();
 				$scope.productcategory = "DAIRY & EGGS";
 				$scope.subcategory = "";
 				break;
-			case "4":
+			case 4:
 				$scope.groceryitem = grocery.bakery();
 				$scope.subcat = subcat.bakery();
 				$scope.productcategory = "BAKERY";
 				$scope.subcategory = "";
 				break;
-			case "5":
+			case 5:
 				$scope.groceryitem = grocery.breakfast();
 				$scope.subcat = subcat.breakfast();
 				$scope.productcategory = "BREAKFAST";
 				$scope.subcategory = "";
 				break;
-			case "6":
+			case 6:
 				$scope.groceryitem = grocery.frozen();
 				$scope.subcat = subcat.frozen();
 				$scope.productcategory = "FROZEN GOODS";
 				$scope.subcategory = "";
 				break;
-			case "7":
+			case 7:
 				$scope.groceryitem = grocery.pantry();
 				$scope.subcat = subcat.pantry();
 				$scope.productcategory = "PANTRY";
 				$scope.subcategory = "";
 				break;
-			case "8":
+			case 8:
 				$scope.groceryitem = grocery.canneditem();
 				$scope.subcat = subcat.canneditem();
 				$scope.productcategory = "CANNED GOODS";
 				$scope.subcategory = "";
 				break;
-			case "9":
+			case 9:
 				$scope.groceryitem = grocery.driedfood();
 				$scope.subcat = subcat.driedfood();
 				$scope.productcategory = "PASTA & DRIED GOODS";
 				$scope.subcategory = "";
 				break;
-			case "10":
+			case 10:
 				$scope.groceryitem = grocery.beverage();
 				$scope.subcat = subcat.beverage();
 				$scope.productcategory = "BEVERAGE";
 				$scope.subcategory = "JUICES & HEALTH DRINKS";
 				break;
-			case "11":
+			case 11:
 				$scope.groceryitem = grocery.healthbeauty();
 				$scope.subcat = subcat.healthbeauty();
 				$scope.productcategory = "HEALTH & BEAUTY";
 				$scope.subcategory = "";
 				break;
-			case "12":
+			case 12:
 				$scope.groceryitem = grocery.homecare();
 				$scope.subcat = subcat.homecare();
 				$scope.productcategory = "HOME CARE";
@@ -235,7 +237,7 @@ myApp
 	$scope.addtocart = function(item, amt, cat, id) {
 		var newitem =  {};
 		var newamt = amt * $scope.noitem;
-		if (newamt > 0 && $scope.budget > ($scope.totalamt + newamt)) {
+		if (newamt > 0 && $scope.budget >= ($scope.totalamt + newamt)) {
 			newitem =  {
 				"description": item,
 				"amt": "P " + newamt.toString(),
